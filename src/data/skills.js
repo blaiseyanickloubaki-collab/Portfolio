@@ -213,4 +213,11 @@ export const skills = [
     level: 'Advanced',
     experience: '1+ years'
   },
+  {
+    id: 30, 
+    name: 'Tailwind CSS',
+    icon: 'Code2', 
+    level: 'Advanced',
+    experience: '1+ years'
+  },
 ];

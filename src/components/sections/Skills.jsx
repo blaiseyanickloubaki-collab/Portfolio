@@ -7,7 +7,7 @@ const Skills = () => {
   // Categorize skills dynamically based on your comprehensive stack
   const skillCategories = {
     'Web & Mobile Development': skills.filter(s => [
-      'HTML & CSS', 'JavaScript', 'React.js', 'Next.js', 'TypeScript', 
+      'HTML & CSS', 'JavaScript', 'Tailwind CSS','React.js', 'Next.js', 'TypeScript', 
       'Flutter & Dart', 'React Native', 'PHP', 'C++'
     ].includes(s.name)),
     
