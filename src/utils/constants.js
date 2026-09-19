@@ -20,7 +20,7 @@ export const SOCIAL_LINKS = {
 };
 
 export const STATS = [
-  { label: 'Years Experience', value: '3+' },
+  { label: 'Years Experience', value: '1+' },
   { label: 'Projects Completed', value: '50+' },
   { label: 'Technologies', value: '15+' },
   { label: 'Client Satisfaction', value: '98%' }

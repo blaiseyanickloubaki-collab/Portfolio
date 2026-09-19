@@ -179,21 +179,21 @@ const Contact = () => {
               </div>
 
               <div className="space-y-4">
-                {/* Mail Card */}
-                <div className="p-5 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary flex-shrink-0">
+                {/* Mail Card - Interactive au survol */}
+                <a
+                  href={`mailto:${PERSONAL_INFO.email}`}
+                  className="p-5 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-4 group hover:border-primary/40 hover:bg-primary/10 transition-all duration-300 cursor-pointer block"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary flex-shrink-0 group-hover:bg-primary group-hover:text-black transition-colors duration-300">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
                     <p className="text-xs text-white/40 mb-0.5">Email</p>
-                    <a
-                      href={`mailto:${PERSONAL_INFO.email}`}
-                      className="text-sm text-white font-medium hover:text-primary transition-colors"
-                    >
+                    <span className="text-sm text-white font-medium group-hover:text-primary transition-colors">
                       {PERSONAL_INFO.email}
-                    </a>
+                    </span>
                   </div>
-                </div>
+                </a>
 
                 {/* Location Card */}
                 <div className="p-5 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-4">

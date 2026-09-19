@@ -4,26 +4,24 @@ import * as Icons from 'lucide-react';
 import FadeIn from "../animations/FadeIn";
 
 const Skills = () => {
-  // Categorize skills
+  // Categorize skills dynamically based on your comprehensive stack
   const skillCategories = {
-    'Frontend Development': [
-      skills.find(s => s.name === 'React.js'),
-      skills.find(s => s.name === 'JavaScript'),
-      skills.find(s => s.name === 'TypeScript'),
-      skills.find(s => s.name === 'Next.js'),
-      skills.find(s => s.name === 'Tailwind CSS'),
-      skills.find(s => s.name === 'Redux'),
-    ].filter(Boolean),
-    'Backend & APIs': [
-      skills.find(s => s.name === 'Node.js'),
-      skills.find(s => s.name === 'REST APIs'),
-    ].filter(Boolean),
-    'Tools & Others': [
-      skills.find(s => s.name === 'Git & GitHub'),
-      skills.find(s => s.name === 'Responsive Design'),
-      skills.find(s => s.name === 'Figma'),
-      skills.find(s => s.name === 'Vite'),
-    ].filter(Boolean),
+    'Web & Mobile Development': skills.filter(s => [
+      'HTML & CSS', 'JavaScript', 'React.js', 'Next.js', 'TypeScript', 
+      'Flutter & Dart', 'React Native', 'PHP', 'C++'
+    ].includes(s.name)),
+    
+    'Backend, Databases & Cloud': skills.filter(s => [
+      'Python', 'Django & DRF', 'Flask & FastAPI', 
+      'SQL & MySQL', 'PostgreSQL & SQLite', 'MongoDB', 
+      'Linux & Bash', 'Docker', 'Git & GitHub', 'MLflow, DVC & CI/CD', 'AWS'
+    ].includes(s.name)),
+    
+    'AI, Deep Learning & Robotics': skills.filter(s => [
+      'NumPy & Pandas', 'Scikit-Learn', 'TensorFlow', 
+      'Computer Vision & OpenCV', 'YOLOv8', 'Transformers & NLP', 
+      'LangChain & Hugging Face', 'Arduino, Raspberry Pi & Jetson', 'ROS 2 & Drone Programming'
+    ].includes(s.name)),
   };
 
   // Get proficiency percentage
@@ -82,7 +80,7 @@ const Skills = () => {
 
                 {/* Skills List */}
                 <div className="space-y-5">
-                  {categorySkills.map((skill, skillIndex) => {
+                  {categorySkills.map((skill) => {
                     const IconComponent = Icons[skill.icon] || Icons.Code2;
                     const proficiency = getProficiencyLevel(skill.level);
 

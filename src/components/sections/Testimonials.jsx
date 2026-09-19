@@ -32,6 +32,7 @@ const Testimonials = () => {
     { value: "99%", label: "Client Satisfaction" },
     { value: "100%", label: "On-Time Delivery" },
     { value: "5★", label: "Average Rating" },
+    { value: "5★", label: "Average Rating" },
   ];
 
   return (

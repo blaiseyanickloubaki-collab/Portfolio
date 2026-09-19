@@ -2,37 +2,37 @@ export const services = [
   {
     id: 1,
     icon: 'Layout',
-    title: 'Frontend Development',
-    description: 'Building responsive and performant web applications using React, Next.js, and modern JavaScript.'
+    title: 'Frontend & Web Development',
+    description: 'Building responsive and performant web applications and dashboards using React, Next.js, and modern JavaScript.'
   },
   {
     id: 2,
     icon: 'Smartphone',
-    title: 'Responsive Design',
-    description: 'Creating mobile-first responsive interfaces that work seamlessly across all devices and screen sizes.'
+    title: 'Mobile App Development',
+    description: 'Creating cross-platform mobile applications for iOS and Android using React Native and Flutter with seamless backend integration.'
   },
   {
     id: 3,
-    icon: 'Palette',
-    title: 'UI/UX Design',
-    description: 'Designing intuitive and visually appealing user interfaces with a focus on usability, accessibility, and user experience.'
+    icon: 'Cpu',
+    title: 'AI & Computer Vision',
+    description: 'Developing intelligent systems and real-time object detection pipelines using YOLOv8, OpenCV, and machine learning models.'
   },
   {
     id: 4,
-    icon: 'Code2',
-    title: 'Custom Components',
-    description: 'Developing reusable, scalable component libraries and design systems that maintain consistency.'
+    icon: 'Zap',
+    title: 'Robotics & ROS 2 Integration',
+    description: 'Engineering autonomous mobile robot navigation systems, sensor fusion, and hardware control pipelines using ROS 2.'
   },
   {
     id: 5,
-    icon: 'Zap',
-    title: 'Performance Optimization',
-    description: 'Optimizing web applications for speed and efficiency through code splitting, lazy loading, and asset optimization.'
+    icon: 'Server',
+    title: 'Full-Stack & Backend',
+    description: 'Developing robust backend services, RESTful APIs, and database management systems with PHP, Node.js, and SQL.'
   },
   {
     id: 6,
     icon: 'GitBranch',
     title: 'Code Review & Consulting',
-    description: 'Providing expert code reviews, architecture consulting, and technical guidance to improve code quality.'
+    description: 'Providing expert code reviews, architecture consulting, and technical guidance to improve software quality.'
   }
 ];

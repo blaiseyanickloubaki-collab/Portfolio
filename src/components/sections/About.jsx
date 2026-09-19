@@ -1,19 +1,18 @@
-import React, { useState } from 'react';
-import { Download, Code2, Sparkles } from 'lucide-react';
-import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiNodedotjs, SiMongodb } from 'react-icons/si';
+import React from 'react';
+import { Download, Code2, Sparkles, Cpu, Bot, Cloud, Terminal, Database, Layers } from 'lucide-react';
 import { PERSONAL_INFO, ABOUT_STATS } from '../../utils/constants';
 import FadeIn from '../animations/FadeIn';
 import RadialGradientBackground from '../backgrounds/RadialGradientBackground';
 
 const About = () => {
-  // Skills
+  // Skills mis à jour avec des icônes 100% sécurisées (Lucide React)
   const skills = [
-    { name: "React.js", icon: SiReact, color: "#61DAFB" },
-    { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
-    { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
-    { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
-    { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
-    { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+    { name: "Python & AI", icon: Terminal },
+    { name: "TensorFlow & Deep Learning", icon: Cpu },
+    { name: "Computer Vision", icon: Sparkles },
+    { name: "Robotics & ROS 2", icon: Bot },
+    { name: "AWS & Cloud", icon: Cloud },
+    { name: "Full-Stack Web/Mobile", icon: Layers },
   ];
 
   return (
@@ -90,12 +89,12 @@ const About = () => {
                 <div className="relative bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <div className="p-3 bg-primary/10 rounded-xl">
-                      <Code2 className="w-6 h-6 text-primary" />
+                      <Bot className="w-6 h-6 text-primary" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-white mb-2">Expertise</h3>
+                      <h3 className="text-lg font-semibold text-white mb-2">AI & Robotics Expertise</h3>
                       <p className="text-sm text-white/70 leading-relaxed">
-                        Specialized in building scalable web applications with modern technologies and best practices.
+                        Specialized in designing intelligent systems, computer vision models, and autonomous robotic solutions bridging software and hardware.
                       </p>
                     </div>
                   </div>
@@ -107,12 +106,12 @@ const About = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
                 <div className="relative bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 h-full">
                   <div className="p-3 bg-primary/10 rounded-xl w-fit mb-4">
-                    <Sparkles className="w-5 h-5 text-primary" />
+                    <Cpu className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-base font-semibold text-white mb-2">Clean Code</h3>
+                    <h3 className="text-base font-semibold text-white mb-2">Deep Learning</h3>
                     <p className="text-sm text-white/70 leading-relaxed">
-                      Writing maintainable, well-documented code that scales.
+                      Building neural networks, NLP models, and MLOps pipelines.
                     </p>
                   </div>
                 </div>
@@ -123,11 +122,11 @@ const About = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
                 <div className="relative bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 h-full">
                   <div className="p-3 bg-primary/10 rounded-xl w-fit mb-4">
-                    <Download className="w-5 h-5 text-primary" />
+                    <Cloud className="w-5 h-5 text-primary" />
                   </div>
-                  <h3 className="text-base font-semibold text-white mb-2">Performance</h3>
+                  <h3 className="text-base font-semibold text-white mb-2">Cloud & Scale</h3>
                   <p className="text-sm text-white/70 leading-relaxed">
-                    Optimizing for speed and efficiency in every project.
+                    Deploying robust applications and cloud architectures (AWS, Docker).
                   </p>
                 </div>
               </div>
@@ -171,20 +170,23 @@ const About = () => {
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 w-full max-w-4xl">
-              {skills.map((skill, index) => (
-                <div
-                  key={index}
-                  className="group relative bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/50 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 transition-all duration-300 hover:scale-105 cursor-pointer"
-                >
-                  <skill.icon className="text-3xl text-primary" />
-                  <div className="text-sm text-white/80 font-medium text-center">
-                    {skill.name}
-                  </div>
+              {skills.map((skill, index) => {
+                const IconComponent = skill.icon;
+                return (
+                  <div
+                    key={index}
+                    className="group relative bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/50 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 transition-all duration-300 hover:scale-105 cursor-pointer"
+                  >
+                    <IconComponent className="w-8 h-8 text-primary" />
+                    <div className="text-sm text-white/80 font-medium text-center">
+                      {skill.name}
+                    </div>
 
-                  {/* Hover Glow Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/0 group-hover:from-primary/10 group-hover:to-primary/10 rounded-2xl transition-all duration-300"></div>
-                </div>
-              ))}
+                    {/* Hover Glow Effect */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/0 group-hover:from-primary/10 group-hover:to-primary/10 rounded-2xl transition-all duration-300"></div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </FadeIn>
